@@ -20,6 +20,13 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "node test.js"
-  }
+    "test": "node test.js",
+    "lint": "jshint .",
+    "validate": "npm ls"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }
